@@ -10,4 +10,5 @@
 
 @implementation UserInfoDefault
 
+single_implementation(UserInfoDefault);
 @end

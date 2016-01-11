@@ -7,7 +7,7 @@
 //
 
 #import "MainTabBarController.h"
-
+#import <Parse/Parse.h>
 @interface MainTabBarController ()
 
 @end
@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFQuery *query = [PFQuery queryWithClassName:@"States"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *states, NSError *error) {
+        NSLog(@"%@",states);
+    }];
+    
+//    [query getObjectInBackgroundWithId:@"1KLOBEfOGM" block:^(PFObject *stetas, NSError *error) {
+//        // Do something with the returned PFObject in the gameScore variable.
+//        NSLog(@"%@", stetas);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

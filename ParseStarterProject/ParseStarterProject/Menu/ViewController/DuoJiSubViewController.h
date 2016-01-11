@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DuoJiSubViewController : UIViewController
-
+@property (nonatomic,strong)NSArray *subDataArray;
 @end

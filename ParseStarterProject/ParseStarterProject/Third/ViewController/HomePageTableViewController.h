@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <SDCycleScrollView.h>
 @interface HomePageTableViewController : UITableViewController
 
 @end

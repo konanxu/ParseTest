@@ -7,7 +7,7 @@
 //
 
 #import "OHHttpTestViewController.h"
-
+#import <Masonry.h>
 @interface OHHttpTestViewController ()
 
 @end
@@ -16,7 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *btn =({
+        UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+        btn.titleLabel.text = @"获取";
+        [self.view addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.view);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(40);
+        }];
+        btn;
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

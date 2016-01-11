@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ListItemModel;
+@interface HomeTypeTwoTableViewCell : UITableViewCell<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
 
-@interface HomeTypeTwoTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
+@property (nonatomic,strong)ListItemModel *model;
 @end

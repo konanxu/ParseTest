@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HomeTypeOneTableViewCell : UITableViewCell
-
+@class ListItemModel;
+@interface HomeTypeOneTableViewCell : UITableViewCell<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (nonatomic,strong)ListItemModel *model;
 @end

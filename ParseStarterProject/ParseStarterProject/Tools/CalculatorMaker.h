@@ -1,5 +1,5 @@
 //
-//  CaculatorMaker.h
+//  CalculatorMaker.h
 //  ParseStarterProject
 //
 //  Created by Konan on 15/12/14.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CaculatorMaker : NSObject
+@interface CalculatorMaker : NSObject
 @property (nonatomic,assign) int result;
 
-+ (int)makeCalculatorS:(void(^)(CaculatorMaker *make))calculatormake;
++ (int)makeCalculatorS:(void(^)(CalculatorMaker *make))calculatormake;
 
-- (CaculatorMaker *(^)(int))add;
-- (CaculatorMaker *(^)(int))sub;
+- (CalculatorMaker *(^)(int))add;
+- (CalculatorMaker *(^)(int))sub;
 
 
 @end

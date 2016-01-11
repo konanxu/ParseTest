@@ -1,0 +1,38 @@
+platform:ios, '7.0'
+
+inhibit_all_warnings!
+
+
+pod 'TTTAttributedLabel'
+pod 'MJRefresh'					#上下拉可定制刷新
+pod 'Reachability'
+pod 'FMDB'
+pod 'BlocksKit'	
+pod 'KVOController' 
+pod 'DZNEmptyDataSet' 
+pod 'Organic' 					#cell
+pod 'SDWebImage'				
+pod 'PromiseKit-AFNetworking'			#Promise
+pod 'MJExtension'
+pod 'Masonry'					#AutoLayout
+pod 'DateTools'					#时间工具
+pod 'DTCoreText'				#富文本框架
+pod 'TPKeyboardAvoiding' 			#点击空白键盘下滑
+pod 'DZNSegmentedControl'			#segment集成
+pod "KHFlatButton"
+pod 'TMCache'					#缓存
+pod 'SVProgressHUD'				#蒙版
+pod 'RKNotificationHub' 			#小红点
+pod 'OHHTTPStubs'      				#模拟返回数据
+pod 'UIColor+FlatColors'  			#扁平颜色
+pod 'MDRadialProgress' 				#圆环组件
+pod "MMMaterialDesignSpinner"
+pod 'JVFloatLabeledTextField'			#美化的UITextField
+pod 'MMDrawerController'			#侧滑菜单
+pod 'RegexKitLite'				#正则表达式
+pod 'Appirater'					#提醒用户评价
+pod 'JazzHands'					#动画
+pod 'NYXImagesKit'
+pod 'ReactiveCocoa'
+pod 'UITableView+FDTemplateLayoutCell'		#动态计算cell
+pod 'SDCycleScrollView'				#循环滚动banner

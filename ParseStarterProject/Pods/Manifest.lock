@@ -1,0 +1,195 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Appirater (2.0.5)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - DateTools (1.7.0)
+  - DTCoreText (1.6.16):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.8)
+  - DTFoundation/DTAnimatedGIF (1.7.8)
+  - DTFoundation/DTHTMLParser (1.7.8):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.8):
+    - DTFoundation/Core
+  - DZNEmptyDataSet (1.7.3)
+  - DZNSegmentedControl (1.3.2)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - JazzHands (2.0.8)
+  - JVFloatLabeledTextField (1.1.0)
+  - KHFlatButton (1.2.0)
+  - KVOController (1.0.3)
+  - Masonry (0.6.4)
+  - MDRadialProgress (1.3.2)
+  - MJExtension (3.0.8)
+  - MJRefresh (3.0.8)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+  - MMMaterialDesignSpinner (0.2.0)
+  - NYXImagesKit (2.3)
+  - OHHTTPStubs (4.7.0):
+    - OHHTTPStubs/Default (= 4.7.0)
+  - OHHTTPStubs/Core (4.7.0)
+  - OHHTTPStubs/Default (4.7.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.7.0)
+  - Organic (0.3)
+  - PromiseKit-AFNetworking (0.1.7):
+    - AFNetworking (~> 2.0)
+    - PromiseKit/Promise (~> 1.5)
+    - PromiseKit/When
+  - PromiseKit/Promise (1.6.0)
+  - PromiseKit/When (1.6.0):
+    - PromiseKit/Promise
+  - Reachability (3.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - RegexKitLite (4.0)
+  - RKNotificationHub (2.0.1)
+  - SDCycleScrollView (1.3)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (1.1.3)
+  - TMCache (2.1.0)
+  - TPKeyboardAvoiding (1.2.11)
+  - TTTAttributedLabel (1.13.4)
+  - UIColor+FlatColors (0.0.2)
+  - UITableView+FDTemplateLayoutCell (1.3)
+
+DEPENDENCIES:
+  - Appirater
+  - BlocksKit
+  - DateTools
+  - DTCoreText
+  - DZNEmptyDataSet
+  - DZNSegmentedControl
+  - FMDB
+  - JazzHands
+  - JVFloatLabeledTextField
+  - KHFlatButton
+  - KVOController
+  - Masonry
+  - MDRadialProgress
+  - MJExtension
+  - MJRefresh
+  - MMDrawerController
+  - MMMaterialDesignSpinner
+  - NYXImagesKit
+  - OHHTTPStubs
+  - Organic
+  - PromiseKit-AFNetworking
+  - Reachability
+  - ReactiveCocoa
+  - RegexKitLite
+  - RKNotificationHub
+  - SDCycleScrollView
+  - SDWebImage
+  - SVProgressHUD
+  - TMCache
+  - TPKeyboardAvoiding
+  - TTTAttributedLabel
+  - UIColor+FlatColors
+  - UITableView+FDTemplateLayoutCell
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  DTCoreText: 934a16fe9ffdd169c96261721b39dc312b75713d
+  DTFoundation: 46e2b2fafe78d67febfd8d1f85fe9845a093f00e
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  DZNSegmentedControl: b78b19d0b11d521a2be56ecff8a8a25d09a289d4
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
+  JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
+  KHFlatButton: 6c91dd8a51efe879d844bc36e38f4d003f4abd14
+  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MDRadialProgress: 1068574b9b4b870f64b605b07f734385bde5104d
+  MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  MMMaterialDesignSpinner: 8f1a50270b789c76ec500957e518fc3e05e55b9d
+  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  OHHTTPStubs: d2bf6a0f407620d67e75a1d3f12d86a2b1dd15c0
+  Organic: 18bfd27331f4ae3b0bdb5884ee81042f534cca86
+  PromiseKit: 6be651503d4af22830b5313be993c5a0ef77bf77
+  PromiseKit-AFNetworking: 364d4cb942a7278f5219c62dc822867655954a8f
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
+  RKNotificationHub: d80905a948c79c11673345f807133a0bfd17e320
+  SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  TPKeyboardAvoiding: e5ce146b313de063957bfa75a13f1e9b0ff18ab7
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UIColor+FlatColors: 6c699df7a575281794c688c64cee6c44fd1f93b4
+  UITableView+FDTemplateLayoutCell: d5be6056b5060313f5955a2590ecd33142ad713d
+
+COCOAPODS: 0.38.2

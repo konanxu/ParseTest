@@ -10,4 +10,8 @@
 
 @interface BaseTableViewController : UITableViewController
 
+
+- (void)showHeaderGifWithState:(BOOL)state;
+
+
 @end

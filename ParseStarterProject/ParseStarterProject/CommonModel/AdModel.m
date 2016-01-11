@@ -10,4 +10,12 @@
 
 @implementation AdModel
 
+
 @end
+
+
+@implementation Action_Params
+
+@end
+
+

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BannerCell : UICollectionViewCell
-
+@property (weak, nonatomic) UIButton *verticalButton;
 @end

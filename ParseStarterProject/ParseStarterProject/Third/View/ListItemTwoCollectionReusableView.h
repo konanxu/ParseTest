@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ListItemTwoCollectionReusableView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
 
 @end

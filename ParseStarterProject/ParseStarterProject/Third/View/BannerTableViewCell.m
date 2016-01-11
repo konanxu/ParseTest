@@ -7,7 +7,7 @@
 //
 
 #import "BannerTableViewCell.h"
-
+#import <SDCycleScrollView.h>
 @implementation BannerTableViewCell
 
 - (void)awakeFromNib {

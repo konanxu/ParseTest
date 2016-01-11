@@ -9,6 +9,8 @@
 #import "ImageTestViewController.h"
 
 @interface ImageTestViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *MyImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @end
 
@@ -16,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.MyImageView.image =[UIImage imageNamed:@"conan.jpg"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

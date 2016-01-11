@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ComicinfoModel;
 @interface HomePageTypeTwoCollectionViewCell : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *typeTwoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *typeTwoLabel;
+@property (nonatomic,strong)ComicinfoModel *model;
 @end

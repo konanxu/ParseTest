@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface IntroduceAnimationViewComtroller : UIViewController
+#import <JazzHands/IFTTTJazzHands.h>
+@interface IntroduceAnimationViewComtroller : IFTTTAnimatedPagingScrollViewController
 
 @end

@@ -10,4 +10,6 @@
 
 @interface LayoutCellTestTableViewController : UITableViewController
 
+@property (nonatomic,copy)NSString *imgUrl;
+
 @end

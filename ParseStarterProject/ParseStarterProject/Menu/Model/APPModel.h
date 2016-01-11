@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface APPModel : NSObject
-
+@property (nonatomic,copy)NSString * imgUrl;
+@property (nonatomic,copy)NSString * decStr;
 @end

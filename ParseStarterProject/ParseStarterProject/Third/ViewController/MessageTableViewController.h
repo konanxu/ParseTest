@@ -7,7 +7,11 @@
 //
 
 #import "BaseTableViewController.h"
-
+#import <DZNSegmentedControl/DZNSegmentedControl.h>
 @interface MessageTableViewController : BaseTableViewController
+
+
+@property (weak, nonatomic) IBOutlet DZNSegmentedControl *segmentView;
+
 
 @end

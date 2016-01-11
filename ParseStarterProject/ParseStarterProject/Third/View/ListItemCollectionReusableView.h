@@ -10,4 +10,5 @@
 
 @interface ListItemCollectionReusableView : UICollectionReusableView
 
+@property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
 @end

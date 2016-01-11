@@ -7,21 +7,52 @@
 //
 
 #import "LayoutCellTestTableViewController.h"
-
+#import "APPModel.h"
+#import "CommonManager.h"
+#import <MJExtension.h>
+#import "LayoutCell.h"
+#import <UITableView+FDTemplateLayoutCell.h>
 @interface LayoutCellTestTableViewController ()
-
+{
+    NSMutableArray *_dataArray;
+}
 @end
+
+#define kWebPath @"https://itunes.apple.com/cn/rss/newfreeapplications/limit=50/json"
+
+static NSString * const kLayoutCellID = @"LayoutCellIdentifier";
 
 @implementation LayoutCellTestTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@",self.imgUrl);
+    _dataArray =[[NSMutableArray alloc] init];
+//    [self.tableView registerClass:[LayoutCell class] forCellReuseIdentifier:kLayoutCellID];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+#pragma mark - LayoutCell 方案1
+    self.tableView.estimatedRowHeight = 80;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.tableFooterView =[UIView new];
+    [[CommonManager shareCommonManager].httpManager GET:kWebPath parameters:nil].then(^(id responseObject,AFHTTPRequestOperation *operation,NSError *error){
+        if (error) {
+             NSLog(@"%@",error.localizedDescription);
+        }else{
+            NSArray *arr = responseObject[@"feed"][@"entry"];
+             [APPModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+                return @{
+                         @"decStr" : @"title.label",
+                         @"imgUrl" : @"im:image[2].label",
+                         };
+            }];
+                             _dataArray= [APPModel mj_objectArrayWithKeyValuesArray:arr];
+            [self.tableView reloadData];
+        }
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,25 +62,32 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+#pragma mark - LayoutCell 方案2
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return [tableView fd_heightForCellWithIdentifier:kLayoutCellID configuration:^(LayoutCell *cell) {
+//        // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
+//        // Like:
+////            cell.entity = self.feedEntities[indexPath.row];
+////        cell.model = _dataArray[indexPath.row];
+//         cell.fd_enforceFrameLayout = NO;
+//    }];
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return _dataArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    LayoutCell *cell = [tableView dequeueReusableCellWithIdentifier:kLayoutCellID forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    cell.model = _dataArray[indexPath.row];
+//    cell.fd_enforceFrameLayout = YES;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

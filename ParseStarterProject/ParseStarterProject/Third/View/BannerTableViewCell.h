@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SDCycleScrollView;
 @interface BannerTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet SDCycleScrollView *bannerView;
 
 @end
