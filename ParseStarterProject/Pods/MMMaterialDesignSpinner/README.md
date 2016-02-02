@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/MMMaterialDesignSpinner.svg?style=flat)](http://cocoadocs.org/docsets/MMMaterialDesignSpinner)
 [![License](https://img.shields.io/cocoapods/l/MMMaterialDesignSpinner.svg?style=flat)](http://cocoadocs.org/docsets/MMMaterialDesignSpinner)
 [![Platform](https://img.shields.io/cocoapods/p/MMMaterialDesignSpinner.svg?style=flat)](http://cocoadocs.org/docsets/MMMaterialDesignSpinner)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ![Demo](https://raw.githubusercontent.com/misterwell/MMMaterialDesignSpinner/master/Demo.gif "Pod Demo")
 
@@ -28,7 +29,10 @@ spinnerView.tintColor = [UIColor redColor];
 // Start & stop animations
 [spinnerView startAnimating];
 [spinnerView stopAnimating];
+
 ```
+Also Support Xib & StoryBoard
+
 
 The `lineWidth` and `tintColor` properties can even be set after animating has been started, which you can observe in the included example project.
 
@@ -41,6 +45,10 @@ MaterialDesignSpinner is available through [CocoaPods](http://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
     pod "MMMaterialDesignSpinner"
+
+MaterialDesignSpinner is also [Carthage](https://github.com/Carthage/Carthage) compatible, add the following line to your Cartfile:
+
+    github "misterwell/MMMaterialDesignSpinner"
 
 ## Author
 

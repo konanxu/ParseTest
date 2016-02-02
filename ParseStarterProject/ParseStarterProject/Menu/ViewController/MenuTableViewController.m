@@ -15,6 +15,7 @@
 #import "ImageTestViewController.h"
 #import "OHHttpTestViewController.h"
 #import "LayoutCellTestTableViewController.h"
+#import "InputUrlViewController.h"
 typedef NS_ENUM(NSInteger, cellType) {
     //传感器
     ChuanGanQi =0,
@@ -22,7 +23,9 @@ typedef NS_ENUM(NSInteger, cellType) {
     XiaLaFangDa,
     AutoTest,
     ImageTest,
-    OHHttp
+    OHHttp,
+    LayoutCell,
+    JSWeb
 };
 @interface MenuTableViewController()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -37,7 +40,7 @@ typedef NS_ENUM(NSInteger, cellType) {
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self showHeaderGifWithState:YES];
-    _dataArray =@[@"传感器",@"多级菜单",@"下拉图片放大",@"AutoLayerout",@"imageTest",@"OHHttpTest",@"LayoutCell"];
+    _dataArray =@[@"传感器",@"多级菜单",@"下拉图片放大",@"AutoLayerout",@"imageTest",@"OHHttpTest",@"LayoutCell",@"JSWeb"];
     NSString *str= [NSString stringWithFormat:@"123"];
     NSLog(@"%@",str);
    _urlStr = @"http://is4.mzstatic.com/image/thumb/Purple2/v4/4a/cd/70/4acd708b-765e-ed60-4f28-25e23bbcd9ea/pr_source.png/75x75bb-85.png";
@@ -105,10 +108,19 @@ typedef NS_ENUM(NSInteger, cellType) {
             [vc setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:vc animated:YES];
         }
+        case LayoutCell:{
+            //尝试用segue来push
+            [self performSegueWithIdentifier:@"FromLayoutCellIdentifier" sender:@{@"imageURL":_urlStr}];
+        }
+            break;
+        case JSWeb:{
+            [self performSegueWithIdentifier:@"FromInputUrldentifier" sender:nil];
+        }
+        
             break;
         default:{
-//尝试用segue来push
-            [self performSegueWithIdentifier:@"FromLayoutCellIdentifier" sender:@{@"imageURL":_urlStr}];
+
+            
         }
             break;
         
@@ -121,6 +133,10 @@ typedef NS_ENUM(NSInteger, cellType) {
         LayoutCellTestTableViewController *detailTableViewController = segue.destinationViewController;
         detailTableViewController.hidesBottomBarWhenPushed = YES;
         detailTableViewController.imgUrl = senderDictionary[@"imageURL"];
+    }
+    if ([segue.identifier isEqualToString:@"FromInputUrldentifier"]) {
+        InputUrlViewController *vc= segue.destinationViewController;
+        vc.hidesBottomBarWhenPushed = YES;
     }
 }
 

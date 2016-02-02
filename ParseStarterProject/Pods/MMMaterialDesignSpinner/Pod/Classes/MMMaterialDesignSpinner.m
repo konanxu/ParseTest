@@ -34,7 +34,13 @@ static NSString *kMMRingRotationAnimationKey = @"mmmaterialdesignspinner.rotatio
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [self initialize];
+}
+
 - (void)initialize {
+    self.duration = 1.5f;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     [self.layer addSublayer:self.progressLayer];
@@ -73,28 +79,31 @@ static NSString *kMMRingRotationAnimationKey = @"mmmaterialdesignspinner.rotatio
     (animate ? [self startAnimating] : [self stopAnimating]);
 }
 
+
+
 - (void)startAnimating {
     if (self.isAnimating)
         return;
     
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"transform.rotation";
-    animation.duration = 4.f;
+    animation.duration = self.duration / 0.375f;
     animation.fromValue = @(0.f);
     animation.toValue = @(2 * M_PI);
     animation.repeatCount = INFINITY;
+    animation.removedOnCompletion = NO;
     [self.progressLayer addAnimation:animation forKey:kMMRingRotationAnimationKey];
     
     CABasicAnimation *headAnimation = [CABasicAnimation animation];
     headAnimation.keyPath = @"strokeStart";
-    headAnimation.duration = 1.f;
+    headAnimation.duration = self.duration / 1.5f;
     headAnimation.fromValue = @(0.f);
     headAnimation.toValue = @(0.25f);
     headAnimation.timingFunction = self.timingFunction;
     
     CABasicAnimation *tailAnimation = [CABasicAnimation animation];
     tailAnimation.keyPath = @"strokeEnd";
-    tailAnimation.duration = 1.f;
+    tailAnimation.duration = self.duration / 1.5f;
     tailAnimation.fromValue = @(0.f);
     tailAnimation.toValue = @(1.f);
     tailAnimation.timingFunction = self.timingFunction;
@@ -102,24 +111,25 @@ static NSString *kMMRingRotationAnimationKey = @"mmmaterialdesignspinner.rotatio
     
     CABasicAnimation *endHeadAnimation = [CABasicAnimation animation];
     endHeadAnimation.keyPath = @"strokeStart";
-    endHeadAnimation.beginTime = 1.f;
-    endHeadAnimation.duration = 0.5f;
+    endHeadAnimation.beginTime = self.duration / 1.5f;
+    endHeadAnimation.duration = self.duration / 3.0f;
     endHeadAnimation.fromValue = @(0.25f);
     endHeadAnimation.toValue = @(1.f);
     endHeadAnimation.timingFunction = self.timingFunction;
     
     CABasicAnimation *endTailAnimation = [CABasicAnimation animation];
     endTailAnimation.keyPath = @"strokeEnd";
-    endTailAnimation.beginTime = 1.f;
-    endTailAnimation.duration = 0.5f;
+    endTailAnimation.beginTime = self.duration / 1.5f;
+    endTailAnimation.duration = self.duration / 3.0f;
     endTailAnimation.fromValue = @(1.f);
     endTailAnimation.toValue = @(1.f);
     endTailAnimation.timingFunction = self.timingFunction;
     
     CAAnimationGroup *animations = [CAAnimationGroup animation];
-    [animations setDuration:1.5f];
+    [animations setDuration:self.duration];
     [animations setAnimations:@[headAnimation, tailAnimation, endHeadAnimation, endTailAnimation]];
     animations.repeatCount = INFINITY;
+    animations.removedOnCompletion = NO;
     [self.progressLayer addAnimation:animations forKey:kMMRingStrokeAnimationKey];
     
     

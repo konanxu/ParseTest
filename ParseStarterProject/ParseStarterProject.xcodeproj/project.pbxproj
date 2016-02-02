@@ -19,6 +19,8 @@
 		0A101701EA5F52B14DD55BBB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3927113F1265E0F58A4D2CB0 /* libPods.a */; };
 		2F0442D81BFC54F200B5993F /* ImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0442D61BFC54F200B5993F /* ImageTestViewController.m */; };
 		2F0442D91BFC54F200B5993F /* ImageTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F0442D71BFC54F200B5993F /* ImageTestViewController.xib */; };
+		2F0AB5AB1C44C08D00384CE3 /* InputUrlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AB5A81C44C08D00384CE3 /* InputUrlViewController.m */; };
+		2F0AB5AC1C44C08D00384CE3 /* JSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AB5AA1C44C08D00384CE3 /* JSWebViewController.m */; };
 		2F2F64E11BE205CB0049CB1E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F64E01BE205CB0049CB1E /* UIView+Extension.m */; };
 		2F3A7EA91BABCBAA0022A245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3A7EA81BABCBAA0022A245 /* Main.storyboard */; };
 		2F3A7EAC1BABD8430022A245 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A7EAB1BABD8430022A245 /* LoginViewController.m */; };
@@ -117,6 +119,7 @@
 		2FD2790A1BD8ADFD008859DD /* intro_tip_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FD278F01BD8ADFD008859DD /* intro_tip_5@2x.png */; };
 		2FD2790B1BD8ADFD008859DD /* intro_tip_5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FD278F11BD8ADFD008859DD /* intro_tip_5@3x.png */; };
 		2FD2790E1BD8B056008859DD /* UIColor+EX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD2790D1BD8B056008859DD /* UIColor+EX.m */; };
+		2FDE41DA1C4792CA00CAF5F8 /* LocalStorageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE41D91C4792CA00CAF5F8 /* LocalStorageController.m */; };
 		2FDEC2C21BF5DBDC0038FEF4 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDEC2C11BF5DBDC0038FEF4 /* NSString+Util.m */; };
 		2FE9AC291C3D5AF30049E3AF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9AC281C3D5AF30049E3AF /* BaseViewController.m */; };
 		2FE9AC2C1C3D5B300049E3AF /* ZhuiZhuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9AC2B1C3D5B300049E3AF /* ZhuiZhuiViewController.m */; };
@@ -153,6 +156,10 @@
 		2F0442D51BFC54F200B5993F /* ImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTestViewController.h; sourceTree = "<group>"; };
 		2F0442D61BFC54F200B5993F /* ImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTestViewController.m; sourceTree = "<group>"; };
 		2F0442D71BFC54F200B5993F /* ImageTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTestViewController.xib; sourceTree = "<group>"; };
+		2F0AB5A71C44C08D00384CE3 /* InputUrlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputUrlViewController.h; sourceTree = "<group>"; };
+		2F0AB5A81C44C08D00384CE3 /* InputUrlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputUrlViewController.m; sourceTree = "<group>"; };
+		2F0AB5A91C44C08D00384CE3 /* JSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewController.h; sourceTree = "<group>"; };
+		2F0AB5AA1C44C08D00384CE3 /* JSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewController.m; sourceTree = "<group>"; };
 		2F2F64DF1BE205B70049CB1E /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		2F2F64E01BE205CB0049CB1E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		2F3A7EA81BABCBAA0022A245 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -291,6 +298,8 @@
 		2FD278F11BD8ADFD008859DD /* intro_tip_5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro_tip_5@3x.png"; sourceTree = "<group>"; };
 		2FD2790C1BD8B056008859DD /* UIColor+EX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EX.h"; sourceTree = "<group>"; };
 		2FD2790D1BD8B056008859DD /* UIColor+EX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EX.m"; sourceTree = "<group>"; };
+		2FDE41D81C4792CA00CAF5F8 /* LocalStorageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStorageController.h; sourceTree = "<group>"; };
+		2FDE41D91C4792CA00CAF5F8 /* LocalStorageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorageController.m; sourceTree = "<group>"; };
 		2FDEC2C01BF5DBDC0038FEF4 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		2FDEC2C11BF5DBDC0038FEF4 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		2FE9AC271C3D5AF30049E3AF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -719,6 +728,10 @@
 		2F6C0D471BD0AA170089DD6A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2F0AB5A71C44C08D00384CE3 /* InputUrlViewController.h */,
+				2F0AB5A81C44C08D00384CE3 /* InputUrlViewController.m */,
+				2F0AB5A91C44C08D00384CE3 /* JSWebViewController.h */,
+				2F0AB5AA1C44C08D00384CE3 /* JSWebViewController.m */,
 				2F6C0D481BD0AA440089DD6A /* MenuTableViewController.h */,
 				2F6C0D491BD0AA440089DD6A /* MenuTableViewController.m */,
 				2F6C0D4D1BD0BB090089DD6A /* ChuanGanQiController.h */,
@@ -742,6 +755,8 @@
 				2F7DC0711C2D3FFD00A85E79 /* OHHttpTestViewController.m */,
 				2F7DC0731C3101BC00A85E79 /* LayoutCellTestTableViewController.h */,
 				2F7DC0741C3101BC00A85E79 /* LayoutCellTestTableViewController.m */,
+				2FDE41D81C4792CA00CAF5F8 /* LocalStorageController.h */,
+				2FDE41D91C4792CA00CAF5F8 /* LocalStorageController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1036,6 +1051,7 @@
 				2FF0F5821C1E906E008DC614 /* CalculatorMaker.m in Sources */,
 				2F6A8EC61C427958008552B3 /* ListItemModel.m in Sources */,
 				2F3A7EAC1BABD8430022A245 /* LoginViewController.m in Sources */,
+				2F0AB5AB1C44C08D00384CE3 /* InputUrlViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				2FDEC2C21BF5DBDC0038FEF4 /* NSString+Util.m in Sources */,
 				2FE9AC331C3D70CE0049E3AF /* ZhuiZhuiHomeQueryModel.m in Sources */,
@@ -1057,8 +1073,10 @@
 				2F3A7EAF1BAF9B950022A245 /* LoginNewViewController.m in Sources */,
 				2F6A8EC31C427390008552B3 /* HomePageTypeOneCollectionViewCell.m in Sources */,
 				2F6C0D171BCD00370089DD6A /* MessageTableViewController.m in Sources */,
+				2F0AB5AC1C44C08D00384CE3 /* JSWebViewController.m in Sources */,
 				2FD278C61BD60F05008859DD /* DuoJiMutilViewController.m in Sources */,
 				2F0442D81BFC54F200B5993F /* ImageTestViewController.m in Sources */,
+				2FDE41DA1C4792CA00CAF5F8 /* LocalStorageController.m in Sources */,
 				2F6C0D4F1BD0BB090089DD6A /* ChuanGanQiController.m in Sources */,
 				2FD2790E1BD8B056008859DD /* UIColor+EX.m in Sources */,
 				2F6C0CEC1BCCE1830089DD6A /* BannerCell.m in Sources */,

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for MMMaterialDesignSpinner.
+FOUNDATION_EXPORT double MMMaterialDesignSpinnerVersionNumber;
+
+//! Project version string for MMMaterialDesignSpinner.
+FOUNDATION_EXPORT const unsigned char MMMaterialDesignSpinnerVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <Cent/PublicHeader.h>
+
 /**
  *  A control similar to iOS' UIActivityIndicatorView modeled after Google's Material Design Activity spinner.
  */
@@ -24,6 +32,9 @@
 
 /** Property indicating whether the view is currently animating. */
 @property (nonatomic, readonly) BOOL isAnimating;
+
+/** Property indicating the duration of the animation, default is 1.5s. Should be set prior to -[startAnimating] */
+@property (nonatomic, readwrite) NSTimeInterval duration;
 
 /**
  *  Convenience function for starting & stopping animation with a boolean variable instead of explicit

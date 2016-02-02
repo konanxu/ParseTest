@@ -832,7 +832,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YjQ-dW-MWE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="vuL-C2-aUa"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P4V-er-Pkm">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="P4V-er-Pkm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -913,7 +914,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsh-Kc-R61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1691" y="3014"/>
+            <point key="canvasLocation" x="-1761" y="2965"/>
         </scene>
         <!--Home Page Table View Controller-->
         <scene sceneID="gfh-kc-DDK">
@@ -1161,11 +1162,100 @@
                     <connections>
                         <segue destination="FD7-1W-034" kind="push" id="Zln-dI-v3A"/>
                         <segue destination="Zpn-l9-t2F" kind="push" identifier="FromLayoutCellIdentifier" id="jD4-Of-gSe"/>
+                        <segue destination="oZ7-OP-abg" kind="push" identifier="FromInputUrldentifier" id="R7z-9J-n6H"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjQ-0o-gAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-44" y="1049"/>
+        </scene>
+        <!--输入-->
+        <scene sceneID="Fe4-ok-NpI">
+            <objects>
+                <viewController id="oZ7-OP-abg" customClass="InputUrlViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kwr-QI-yFc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ia8-oE-Fiq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QGz-i3-P1M">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-oh-LBI">
+                                <rect key="frame" x="116" y="273" width="88" height="30"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="commit:" destination="oZ7-OP-abg" eventType="touchUpInside" id="ZSG-9k-aZ4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入网址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nso-uY-hME">
+                                <rect key="frame" x="20" y="194" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcl-jZ-byD">
+                                <rect key="frame" x="20" y="29" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.59215686274509804" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xp6-yv-udL" appends="YES" id="gLA-GF-CwC"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="输入" id="PJW-G9-jMy"/>
+                    <connections>
+                        <outlet property="commitBtn" destination="P8p-oh-LBI" id="C4R-W3-mxd"/>
+                        <outlet property="myTextField" destination="Nso-uY-hME" id="VYp-x9-gHy"/>
+                        <segue destination="Yj2-id-P1o" kind="push" identifier="FromJSWebIdentifier" id="Idl-j0-YkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRa-5y-kVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xp6-yv-udL">
+                    <connections>
+                        <outlet property="delegate" destination="oZ7-OP-abg" id="rvV-nH-Zao"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-226" y="1761"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="C0v-wR-BrB">
+            <objects>
+                <viewController id="Yj2-id-P1o" customClass="JSWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Pl-hv-C5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="aaA-oE-gri"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b47-br-Ivu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCU-Vi-LrI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Yj2-id-P1o" id="7d4-8o-ISH"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZCU-Vi-LrI" firstAttribute="top" secondItem="9Pl-hv-C5X" secondAttribute="bottom" id="Oc7-SZ-uUw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCU-Vi-LrI" secondAttribute="trailing" id="SxD-ny-lh7"/>
+                            <constraint firstItem="aaA-oE-gri" firstAttribute="top" secondItem="ZCU-Vi-LrI" secondAttribute="bottom" id="Ueb-vt-P8k"/>
+                            <constraint firstItem="ZCU-Vi-LrI" firstAttribute="leading" secondItem="b47-br-Ivu" secondAttribute="leading" id="rqo-LX-xwb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="详情" id="cNV-Js-psg"/>
+                    <connections>
+                        <outlet property="myWebView" destination="ZCU-Vi-LrI" id="tAN-ai-LbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ts-uh-hNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="1761"/>
         </scene>
         <!--Chuan Gan Qi Controller-->
         <scene sceneID="MNK-1T-Uo1">
@@ -1239,7 +1329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0e-1H-cuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="1609"/>
+            <point key="canvasLocation" x="598" y="1761"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gz8-qb-3UW">
@@ -1544,6 +1634,10 @@
         <scene sceneID="IOP-r6-q6K">
             <objects>
                 <viewController id="1U0-DN-8Sa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BhN-o4-Urh"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Oh-iz-CSW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JtG-LJ-iq1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1552,7 +1646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kx8-mH-laM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2345" y="2730"/>
+            <point key="canvasLocation" x="-2113" y="2674"/>
         </scene>
     </scenes>
     <resources>
