@@ -29,7 +29,7 @@ static NSString * const kLayoutCellID = @"LayoutCellIdentifier";
     NSLog(@"%@",self.imgUrl);
     _dataArray =[[NSMutableArray alloc] init];
 //    [self.tableView registerClass:[LayoutCell class] forCellReuseIdentifier:kLayoutCellID];
-    
+    [self runtimeTest];
 #pragma mark - LayoutCell 方案1
     self.tableView.estimatedRowHeight = 80;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -87,7 +87,22 @@ static NSString * const kLayoutCellID = @"LayoutCellIdentifier";
 //    cell.fd_enforceFrameLayout = YES;
     return cell;
 }
-
+- (void)runtimeTest{
+    unsigned int count;
+    //获取属性列表
+    objc_property_t *propertyList =class_copyPropertyList([APPModel class], &count);
+    for (unsigned int i=0; i<count; i++) {
+        const char *propertyName =property_getName(propertyList[i]);
+        NSLog(@"property-->%@",[NSString stringWithUTF8String:propertyName]);
+    }
+    
+    Ivar *ivarList = class_copyIvarList([APPModel class], &count);
+    for (unsigned int i; i<count; i++) {
+        Ivar myIvar = ivarList[i];
+        const char *ivarName = ivar_getName(myIvar);
+        NSLog(@"Ivar---->%@", [NSString stringWithUTF8String:ivarName]);
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

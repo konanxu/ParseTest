@@ -8,6 +8,12 @@
 
 #import "APPModel.h"
 
+@interface APPModel()
+{
+    NSString *_str;
+}
+@end
+
 @implementation APPModel
 
 @end
