@@ -8,16 +8,23 @@
 
 #import "LayoutCell.h"
 #import <UIImageView+WebCache.h>
+typedef void(^myBlock)();
 @implementation LayoutCell
 
 - (void)awakeFromNib {
     // Initialization code
+    myBlock blovk = ^{
+        
+    };
 }
-
++ (void)test:(void(^)())block{
+    
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
 }
 
 - (void)setModel:(APPModel *)model{

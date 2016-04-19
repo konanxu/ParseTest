@@ -16,4 +16,12 @@
 
 @implementation APPModel
 
+- (instancetype)init{
+    self =[super init];
+    if (self) {
+        NSLog(@"%@",NSStringFromClass([self class]));
+        NSLog(@"%@",NSStringFromClass([super class]));
+       NSLog(@"%@",self.superclass); 
+    }return self;
+}
 @end
