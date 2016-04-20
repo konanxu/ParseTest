@@ -1,4 +1,4 @@
-platform:ios, '7.0'
+platform:ios, ‘8.0’
 
 inhibit_all_warnings!
 
@@ -36,4 +36,11 @@ pod 'NYXImagesKit'
 pod 'ReactiveCocoa'
 pod 'UITableView+FDTemplateLayoutCell'		#动态计算cell
 pod 'SDCycleScrollView'				#循环滚动banner
-pod 'OpenCV'                        #人脸识别
+pod 'OpenCV'                        		#人脸识别
+pod 'FBMemoryProfiler', '~> 0.1.1'		#实时leaks检测
+                     
+
+
+
+#FXForms:快速搭出表单
+#Onboard 引导页

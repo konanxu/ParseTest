@@ -27,6 +27,9 @@
 		2F3A7EAF1BAF9B950022A245 /* LoginNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A7EAE1BAF9B950022A245 /* LoginNewViewController.m */; };
 		2F3A7EB71BAFD0460022A245 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A7EB61BAFD0460022A245 /* MainTabBarController.m */; };
 		2F3A7F8A1BC8F9B90022A245 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3A7F891BC8F9B90022A245 /* Images.xcassets */; };
+		2F48C14D1CC6424300E0911A /* CacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F48C14A1CC6424300E0911A /* CacheCleanerPlugin.m */; };
+		2F48C14E1CC6424400E0911A /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F48C14C1CC6424300E0911A /* RetainCycleLoggerPlugin.m */; };
+		2F48C1511CC7712100E0911A /* StakViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F48C1501CC7712100E0911A /* StakViewViewController.m */; };
 		2F6A8EBC1C421F2F008552B3 /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6A8EBB1C421F2F008552B3 /* BannerModel.m */; };
 		2F6A8EBF1C421F4B008552B3 /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6A8EBE1C421F4B008552B3 /* InfoModel.m */; };
 		2F6A8EC31C427390008552B3 /* HomePageTypeOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6A8EC21C427390008552B3 /* HomePageTypeOneCollectionViewCell.m */; };
@@ -170,6 +173,12 @@
 		2F3A7EB51BAFD0460022A245 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		2F3A7EB61BAFD0460022A245 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		2F3A7F891BC8F9B90022A245 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F48C1491CC6424300E0911A /* CacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCleanerPlugin.h; sourceTree = "<group>"; };
+		2F48C14A1CC6424300E0911A /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
+		2F48C14B1CC6424300E0911A /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
+		2F48C14C1CC6424300E0911A /* RetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
+		2F48C14F1CC7712100E0911A /* StakViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakViewViewController.h; sourceTree = "<group>"; };
+		2F48C1501CC7712100E0911A /* StakViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakViewViewController.m; sourceTree = "<group>"; };
 		2F6A8EBA1C421F2F008552B3 /* BannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
 		2F6A8EBB1C421F2F008552B3 /* BannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		2F6A8EBD1C421F4B008552B3 /* InfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
@@ -510,6 +519,10 @@
 		2F6C0CA31BCB91F80089DD6A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2F48C1491CC6424300E0911A /* CacheCleanerPlugin.h */,
+				2F48C14A1CC6424300E0911A /* CacheCleanerPlugin.m */,
+				2F48C14B1CC6424300E0911A /* RetainCycleLoggerPlugin.h */,
+				2F48C14C1CC6424300E0911A /* RetainCycleLoggerPlugin.m */,
 				2F6C0D0F1BCCFCD80089DD6A /* ViewController */,
 				2F6C0CA41BCB933B0089DD6A /* Singeton.h */,
 				2F6C0CA51BCB93760089DD6A /* UserInfoDefault.h */,
@@ -757,6 +770,8 @@
 				2F7DC0741C3101BC00A85E79 /* LayoutCellTestTableViewController.m */,
 				2FDE41D81C4792CA00CAF5F8 /* LocalStorageController.h */,
 				2FDE41D91C4792CA00CAF5F8 /* LocalStorageController.m */,
+				2F48C14F1CC7712100E0911A /* StakViewViewController.h */,
+				2F48C1501CC7712100E0911A /* StakViewViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -894,6 +909,7 @@
 				09ABC06B13A1D52D009C3FCF /* Resources */,
 				81A6CA5F1A2EA3D600297C39 /* Upload Symbol Files */,
 				CFA680CB8A17CC86F1549F10 /* Copy Pods Resources */,
+				F1F69AE3B87425A4E7574E1E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1040,6 +1056,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F1F69AE3B87425A4E7574E1E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1077,6 +1108,7 @@
 				2FD278C61BD60F05008859DD /* DuoJiMutilViewController.m in Sources */,
 				2F0442D81BFC54F200B5993F /* ImageTestViewController.m in Sources */,
 				2FDE41DA1C4792CA00CAF5F8 /* LocalStorageController.m in Sources */,
+				2F48C14D1CC6424300E0911A /* CacheCleanerPlugin.m in Sources */,
 				2F6C0D4F1BD0BB090089DD6A /* ChuanGanQiController.m in Sources */,
 				2FD2790E1BD8B056008859DD /* UIColor+EX.m in Sources */,
 				2F6C0CEC1BCCE1830089DD6A /* BannerCell.m in Sources */,
@@ -1085,6 +1117,8 @@
 				2F2F64E11BE205CB0049CB1E /* UIView+Extension.m in Sources */,
 				2FD278C91BD60F28008859DD /* DuoJiSubViewController.m in Sources */,
 				2FFFF7191BE1B99F00862DA0 /* AdModel.m in Sources */,
+				2F48C14E1CC6424400E0911A /* RetainCycleLoggerPlugin.m in Sources */,
+				2F48C1511CC7712100E0911A /* StakViewViewController.m in Sources */,
 				2F6C0D3D1BD08C8F0089DD6A /* MapViewController.m in Sources */,
 				2FE9AC291C3D5AF30049E3AF /* BaseViewController.m in Sources */,
 				2F6C0CA21BCB591C0089DD6A /* HomeViewController.m in Sources */,
@@ -1167,7 +1201,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Konan的App";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1192,7 +1226,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Konan的App";
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;

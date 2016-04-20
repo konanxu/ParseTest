@@ -36,11 +36,16 @@
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
 #import "NSString+Util.h"
+#import <FBMemoryProfiler/FBMemoryProfiler.h>
+
+#import "CacheCleanerPlugin.h"
+#import "RetainCycleLoggerPlugin.h"
 #define kDefaultSB [UIStoryboard storyboardWithName:@"Main" bundle:nil]
 
 @implementation ParseStarterProjectAppDelegate
 {
     BMKMapManager* _mapManager;
+    FBMemoryProfiler *_memoryProfiler;
 }
 
 
@@ -165,7 +170,10 @@
     
     [self.window makeKeyAndVisible];
     
-    
+    _memoryProfiler = [[FBMemoryProfiler alloc] initWithPlugins:@[[CacheCleanerPlugin new],
+                                                                  [RetainCycleLoggerPlugin new]]
+                               retainCycleDetectorConfiguration:nil];
+    [_memoryProfiler enable];
     
     return YES;
 }

@@ -1163,6 +1163,7 @@
                         <segue destination="FD7-1W-034" kind="push" id="Zln-dI-v3A"/>
                         <segue destination="Zpn-l9-t2F" kind="push" identifier="FromLayoutCellIdentifier" id="jD4-Of-gSe"/>
                         <segue destination="oZ7-OP-abg" kind="push" identifier="FromInputUrldentifier" id="R7z-9J-n6H"/>
+                        <segue destination="nDp-RU-fGa" kind="push" identifier="FromStakdentifier" id="Gpk-L2-lo4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjQ-0o-gAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1330,6 +1331,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0e-1H-cuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="1761"/>
+        </scene>
+        <!--Stak View View Controller-->
+        <scene sceneID="Nw2-tU-m6a">
+            <objects>
+                <viewController id="nDp-RU-fGa" customClass="StakViewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dEg-ad-WsM"/>
+                        <viewControllerLayoutGuide type="bottom" id="QwN-S8-xfy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mZq-zP-cbF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-lk-Mjr">
+                                <rect key="frame" x="20" y="10" width="280" height="353"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japan01" translatesAutoresizingMaskIntoConstraints="NO" id="Nmj-ES-I6I">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="111"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japan02" translatesAutoresizingMaskIntoConstraints="NO" id="eJt-Zn-VUm">
+                                        <rect key="frame" x="0.0" y="121" width="280" height="111"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japan03" translatesAutoresizingMaskIntoConstraints="NO" id="HSn-pJ-fCq">
+                                        <rect key="frame" x="0.0" y="242" width="280" height="111"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2he-5H-nv8">
+                                <rect key="frame" x="20" y="373" width="280" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nature" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-QD-eca">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StackView demo test" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp5-8D-7Tt">
+                                        <rect key="frame" x="0.0" y="23" width="144.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i4K-lk-Mjr" secondAttribute="trailing" constant="20" id="3IF-bP-IZm"/>
+                            <constraint firstItem="2he-5H-nv8" firstAttribute="top" secondItem="i4K-lk-Mjr" secondAttribute="bottom" constant="10" id="K5m-s0-BnP"/>
+                            <constraint firstItem="i4K-lk-Mjr" firstAttribute="top" secondItem="dEg-ad-WsM" secondAttribute="bottom" constant="10" id="PIh-D4-kks"/>
+                            <constraint firstAttribute="trailing" secondItem="2he-5H-nv8" secondAttribute="trailing" constant="20" id="cdZ-BE-SBH"/>
+                            <constraint firstItem="i4K-lk-Mjr" firstAttribute="height" secondItem="mZq-zP-cbF" secondAttribute="height" multiplier="7:10" id="fbM-XD-jfD"/>
+                            <constraint firstItem="2he-5H-nv8" firstAttribute="leading" secondItem="mZq-zP-cbF" secondAttribute="leading" constant="20" id="qRh-PJ-oaB"/>
+                            <constraint firstItem="i4K-lk-Mjr" firstAttribute="leading" secondItem="mZq-zP-cbF" secondAttribute="leading" constant="20" id="ye0-SU-vm1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jy5-aQ-Cif"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhq-pG-jhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="1750"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gz8-qb-3UW">
@@ -1656,6 +1718,9 @@
         <image name="UserDefault" width="256" height="256"/>
         <image name="conan.jpg" width="1000" height="727"/>
         <image name="gitImage.jpg" width="460" height="450"/>
+        <image name="japan01" width="1000" height="600"/>
+        <image name="japan02" width="1024" height="641"/>
+        <image name="japan03" width="800" height="607"/>
         <image name="yuan.jpg" width="203" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>

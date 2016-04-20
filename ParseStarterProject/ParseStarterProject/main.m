@@ -11,9 +11,11 @@
 #import <UIKit/UIKit.h>
 
 #import "ParseStarterProjectAppDelegate.h"
-
+#import <FBAllocationTracker/FBAllocationTrackerManager.h>
 int main(int argc, char *argv[])
 {
+    [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
+    [[FBAllocationTrackerManager sharedManager] enableGenerations];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([ParseStarterProjectAppDelegate class]));
     }

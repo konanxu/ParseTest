@@ -50,6 +50,11 @@ PODS:
     - DTFoundation/Core
   - DZNEmptyDataSet (1.7.3)
   - DZNSegmentedControl (1.3.3)
+  - FBAllocationTracker (0.1.2)
+  - FBMemoryProfiler (0.1.1):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
+  - FBRetainCycleDetector (0.1.1)
   - FMDB (2.6):
     - FMDB/standard (= 2.6)
   - FMDB/standard (2.6)
@@ -126,6 +131,7 @@ DEPENDENCIES:
   - DTCoreText
   - DZNEmptyDataSet
   - DZNSegmentedControl
+  - FBMemoryProfiler (~> 0.1.1)
   - FMDB
   - JazzHands
   - JVFloatLabeledTextField
@@ -164,6 +170,9 @@ SPEC CHECKSUMS:
   DTFoundation: 70a0765e3596f82dd421832e95c65e2166eb3102
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
+  FBAllocationTracker: f8086f5eacc992bd87d460eea7b084d63d62cf67
+  FBMemoryProfiler: e8192cfb24b96d89a0784698978259ffccc561c6
+  FBRetainCycleDetector: 2f5eede420492607df2bee1807887383b9887109
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
@@ -194,4 +203,4 @@ SPEC CHECKSUMS:
   UIColor+FlatColors: 6c699df7a575281794c688c64cee6c44fd1f93b4
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

@@ -16,6 +16,7 @@
 #import "OHHttpTestViewController.h"
 #import "LayoutCellTestTableViewController.h"
 #import "InputUrlViewController.h"
+#import "StakViewViewController.h"
 typedef NS_ENUM(NSInteger, cellType) {
     //传感器
     ChuanGanQi =0,
@@ -25,7 +26,8 @@ typedef NS_ENUM(NSInteger, cellType) {
     ImageTest,
     OHHttp,
     LayoutCell,
-    JSWeb
+    JSWeb,
+    Stack
 };
 @interface MenuTableViewController()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -40,7 +42,7 @@ typedef NS_ENUM(NSInteger, cellType) {
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self showHeaderGifWithState:YES];
-    _dataArray =@[@"传感器",@"多级菜单",@"下拉图片放大",@"AutoLayerout",@"imageTest",@"OHHttpTest",@"LayoutCell",@"JSWeb"];
+    _dataArray =@[@"传感器",@"多级菜单",@"下拉图片放大",@"AutoLayerout",@"imageTest",@"OHHttpTest",@"LayoutCell",@"JSWeb",@"StackView"];
     NSString *str= [NSString stringWithFormat:@"123"];
     NSLog(@"%@",str);
    _urlStr = @"http://is4.mzstatic.com/image/thumb/Purple2/v4/4a/cd/70/4acd708b-765e-ed60-4f28-25e23bbcd9ea/pr_source.png/75x75bb-85.png";
@@ -118,6 +120,11 @@ typedef NS_ENUM(NSInteger, cellType) {
         }
         
             break;
+        case Stack:{
+            [self performSegueWithIdentifier:@"FromStakdentifier" sender:nil];
+        }
+            
+            break;
         default:{
 
             
@@ -136,6 +143,10 @@ typedef NS_ENUM(NSInteger, cellType) {
     }
     if ([segue.identifier isEqualToString:@"FromInputUrldentifier"]) {
         InputUrlViewController *vc= segue.destinationViewController;
+        vc.hidesBottomBarWhenPushed = YES;
+    }
+    if ([segue.identifier isEqualToString:@"FromStakdentifier"]) {
+        StakViewViewController *vc= segue.destinationViewController;
         vc.hidesBottomBarWhenPushed = YES;
     }
 }
